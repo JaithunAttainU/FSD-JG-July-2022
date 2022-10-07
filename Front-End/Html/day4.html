@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Forms</title>
+</head>
+
+<body>
+
+  <form>
+    <fieldset>
+      <legend>Basic Info</legend>
+      <div>
+        <label for="name">Enter Name:</label>
+        <input type="text" id="name" minlength="3" maxlength="5" required autocomplete="off" name="username"
+          placeholder="Enter Username Here..." value="Abhishek" />
+      </div>
+
+      <br />
+      <div>
+        <label for="email">Enter Email:</label>
+        <input type="email" id="email" name="email" />
+      </div>
+
+      <br />
+      <div>
+        <label for="pass">Enter Password:</label>
+        <input type="password" id="pass" />
+      </div>
+
+      <br />
+      <div>
+        <label for="dob">Enter Date Of Birth:</label>
+        <input type="date" id="dob" name="dob">
+      </div>
+
+      <br />
+      <div>
+        <label for="file">Upload File:</label>
+        <input type="file" id="file" name="file" multiple />
+      </div>
+
+
+      <br />
+
+    </fieldset>
+
+    <br />
+    <fieldset>
+      <legend>Other Details</legend>
+      <br />
+      <div>
+        <label for="color">Select fav color:</label>
+        <input type="color" id="color" name="color" />
+      </div>
+      <br />
+      <div>
+        <label for="gender">Gender</label>
+        <input type="radio" name="gender" value="male" id="male" checked /><label for="male">Male</label>
+        <input type="radio" name="gender" value="female" id="female" /><label for="female">Female</label>
+        <input type="radio" name="gender" value="other" id="others" /><label for="others">Others</label>
+      </div>
+
+      <br />
+      <div>
+        <label for="hobbies">Hobbies</label>
+        <input type="checkbox" name="hobbies" value="music" />Listening Music
+        <input type="checkbox" name="hobbies" value="cooking" checked disabled />Cooking
+        <input type="checkbox" name="hobbies" value="playing" />Playing
+        <input type="checkbox" name="hobbies" value="assignment" />CC and Assignment
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <div>
+        <label for="about-me">About Me:</label>
+        <textarea id="about-me" rows="10" cols="100"></textarea>
+      </div>
+      <!-- <div>
+        <label for="about-me">About Me:</label>
+        <textarea id="about-me" rows="10" cols="100" maxlength="500"></textarea>
+      </div> -->
+      <div>
+        <label for="country">Select Country:</label>
+        <select>
+          <option disabled selected>Select an Option</option>
+          <optgroup label="Asia">
+            <option>India</option>
+            <option>China</option>
+          </optgroup>
+
+          <optgroup label="Europe">
+            <option>Bhutan</option>
+            <option>Ukraine</option>
+          </optgroup>
+        </select>
+      </div>
+    </fieldset>
+
+    <br />
+    <div>
+      <!-- <input type="submit" /> -->
+      <input type="reset" />
+
+      <button type="submit">Register</button>
+      <!-- <button type="reset">Reset</button> -->
+    </div>
+  </form>
+
+</body>
+
+</html>
