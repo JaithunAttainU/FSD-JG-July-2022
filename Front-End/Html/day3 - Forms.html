@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Forms</title>
+</head>
+
+<body>
+
+  <form>
+    <div>
+      <label for="name">Enter Name:</label>
+      <input type="text" id="name" minlength="3" maxlength="5" required autocomplete="off" />
+    </div>
+
+    <br />
+    <div>
+      <label for="email">Enter Email:</label>
+      <input type="email" id="email" />
+    </div>
+
+    <br />
+    <div>
+      <label for="pass">Enter Password:</label>
+      <input type="password" id="pass" />
+    </div>
+
+    <br />
+    <div>
+      <label for="gender">Gender</label>
+      <input type="radio" name="gender" id="male" checked /><label for="male">Male</label>
+      <input type="radio" name="gender" id="female" /><label for="female">Female</label>
+      <input type="radio" name="gender" id="others" /><label for="others">Others</label>
+    </div>
+
+    <br />
+    <div>
+      <label for="hobbies">Hobbies</label>
+      <input type="checkbox" name="hobbies" />Listening Music
+      <input type="checkbox" name="hobbies" checked disabled />Cooking
+      <input type="checkbox" name="hobbies" />Playing
+      <input type="checkbox" name="hobbies" />CC and Assignment
+    </div>
+
+    <br />
+    <div>
+      <input type="submit" />
+      <input type="reset" />
+
+      <!-- <button type="submit">Submit</button>
+      <button type="reset">Reset</button> -->
+    </div>
+  </form>
+
+</body>
+
+</html>
