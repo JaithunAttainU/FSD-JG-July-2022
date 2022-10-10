@@ -1,0 +1,32 @@
+div {
+  background-color: wheat;
+  border: 2px dotted;
+}
+
+h5{
+  color: red;
+}
+
+/* Selecting based on ID */
+
+#login {
+  background-color: greenyellow;
+}
+
+#signup {
+  background-color: greenyellow;
+}
+
+/* Selecting based on class name */
+.primary {
+  background-color: greenyellow;
+}
+
+.warn {
+  background-color: red;
+}
+
+.btn {
+  border-radius: 10px;
+  width: 150px;
+}

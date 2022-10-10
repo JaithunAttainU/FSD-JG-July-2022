@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Cascading Style Sheet</title>
+  <!-- External Css - Always prefer this over other type of linking -->
+  <link href="./style.css" rel="stylesheet" />
+  <link href="./style2.css" rel="stylesheet" />
+
+  <!-- Internal CSS - Do not use this - Not a preferred method -->
+  <style>
+    /* Selecting based on Tag name */
+    h5 {
+      /* color: blue; */
+      text-decoration: underline;
+      font-style: italic;
+    }
+
+    p {
+      font-family: Georgia, 'Times New Roman', Times, serif
+    }
+
+    main {
+      border: 4px solid;
+    }
+  </style>
+</head>
+
+<body style="background-color:lightblue;">
+  <main>
+    <!-- Inline Styles - Do not use this - Not a preferred method -->
+    <!-- <article style="background-color: aqua; color: red; font-size: xx-large; font-style: italic;">
+      <section>
+        <h5 style="color: black;">Section 1</h5>
+        <p>Lorem ipsum dolor, sit amet <span style="background-color:pink">consectetur</span> adipisicing elit. Itaque,
+          quidem eligendi, quia est
+          voluptas
+          inventore in porro rem autem quaerat officia accusantium similique praesentium illum aperiam non quibusdam
+          esse! Quis.</p>
+      </section>
+      <section>
+        <h5>Section 2</h5>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque, quidem eligendi, quia est voluptas
+          inventore in porro rem autem quaerat officia accusantium similique praesentium illum aperiam non quibusdam
+          esse! Quis.</p>
+      </section>
+    </article>
+
+    <article style="background-color: teal; font-size: xx-large;">
+      <section>
+        <h5>Section 1</h5>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque, quidem eligendi, quia est voluptas
+          inventore in porro rem autem quaerat officia accusantium similique praesentium illum aperiam non quibusdam
+          esse! Quis.</p>
+      </section>
+    </article>
+
+    <a href="https://www.amazon.com">Go to amazon</a> -->
+  </main>
+
+  <div class="primary">
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum nulla ad ipsum deleniti laborum veniam quam totam
+      minus iste non distinctio voluptatem id nesciunt fugit, dolores, inventore, ab nam quia!
+    </p>
+  </div>
+
+
+  <button class="primary btn" id="login">Login</button>
+  <button class="primary btn" id="signup">Signup</button>
+  <button class="warn btn" id="delete">Delete</button>
+  <button class="warn btn" id="warning">Warning</button>
+</body>
+
+</html>
+
+<!-- 
+1)Inline
+2)Internal
+3)External -->
