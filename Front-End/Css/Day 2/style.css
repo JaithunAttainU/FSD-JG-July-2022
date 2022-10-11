@@ -1,0 +1,38 @@
+#paraId {
+  font-size: 100px;
+}
+
+#highlightedText {
+  /*em, rem*/
+  font-size: 20vw; 
+}
+
+#box {
+  /*v - viewport*/
+  width: 20vw;
+  height: 20vh;
+  background-color: lightblue;
+}
+
+#box-model {
+  /*top right botton left*/
+  /* border-width: 5px 10px 15px 20px;
+  border-style: solid dashed dotted double;
+  border-color: red; */
+  border-radius: 20px;
+
+  /*width style color*/
+  border: 5px solid red;
+  /* border-top-width: 10px;
+  border-right-width: 15px;
+  border-left-width: 20px;
+  border-right-width: 25px; */
+
+  /* border-top-style: dashed; */
+
+  margin: 5px 10px 15px 20px;
+  margin-top: 20px;
+  margin-left: 2px;
+
+  padding: 20px;
+}
