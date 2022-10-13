@@ -1,0 +1,79 @@
+#paraId {
+  font-size: 100px;
+}
+
+#highlightedText {
+  /*em, rem*/
+  font-size: 20vw; 
+}
+
+#box {
+  /*v - viewport*/
+  width: 20vw;
+  height: 20vh;
+  background-color:rgba(13, 13, 13, 0.2);
+  background-color: #04a186;
+  background-color: hsla(154, 100%, 51%, 0.525);
+}
+
+#box-model {
+  /*top right botton left*/
+  /* border-width: 5px 10px 15px 20px;
+  border-style: solid dashed dotted double;
+  border-color: red; */
+  border-radius: 20px;
+
+  /*width style color*/
+  border: 5px solid red;
+  /* border-top-width: 10px;
+  border-right-width: 15px;
+  border-left-width: 20px;
+  border-right-width: 25px; */
+
+  /* border-top-style: dashed; */
+
+  margin: 20px;
+  margin-top: 20px;
+  margin-left: 45vw;
+
+  width: 10vw;
+  padding: 20px;
+}
+
+.section {
+  margin: 30px;
+}
+
+#login {
+  margin-right: 20px;
+}
+
+#delete {
+  margin-left: 20px;
+}
+
+.section-para {
+  font-family: 'Times New Roman', Times, serif;
+  /* font-size: 25px; */
+  font-weight: bold;
+  font-style: italic;
+  /* text-decoration: line-through; */
+
+  /* text-transform: uppercase; */
+
+  line-height: 3.0;
+  word-spacing: 20px;
+  letter-spacing: 5px;
+  text-indent: 50px;
+  text-align: center;
+
+
+}
+
+/* Multi-Element Selector */
+.section, 
+h4, 
+button {
+  background-color: blue;
+  color: white;
+}
