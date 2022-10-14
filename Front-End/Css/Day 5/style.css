@@ -1,0 +1,70 @@
+/* #name {
+  width: 200px;
+}
+
+#description {
+  width: 200px;
+} */
+
+/* 
+.required {
+  width: 250px
+} */
+
+/* Attribute based Selection */
+input[required] {
+  width: 250px;
+}
+
+input[required][type="text"] {
+  background-color: teal;
+}
+
+label[for="name"] {
+  color: red;
+}
+
+/* Child Selectors */
+.main .para-blue p {
+  color: blue;
+}
+
+/*Immediate Child Selectors*/
+.main>section {
+  color: lightblue;
+}
+
+.box-shadow {
+  background-color: red;
+  /* box-shadow: -5px -5px 2px 1px pink, 3px 3px 1px 1px blue, 5px 5px 2px 1px pink; */
+  /* box-shadow:  0px 0px 5px 20px pink ; */
+  box-shadow: inset 5px 5px pink;
+
+  text-shadow: 2px 2px grey;
+
+}
+
+#inline {
+  width: 50%;
+} 
+
+#dummy-box {
+  /* transition: margin-left 2s linear 3s; */
+  transition: transform 5s linear 2s;
+  width: 200px;
+  height: 200px;
+  background-color: blue;
+  margin: auto;
+
+  transform: translate(120px, 50%);
+  /* transform: scale(2, 0.5); */
+  /* transform: skew(30deg, 30deg); */
+
+  /* transform: rotate(45deg); */
+}
+/* 
+#dummy-box:hover {
+  background-color: red;
+
+  margin-left: 900px;
+} */
