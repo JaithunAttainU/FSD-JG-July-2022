@@ -1,0 +1,55 @@
+#dummy-box {
+  width: 200px;
+  height: 200px;
+  background-color: teal;
+  margin: auto;
+   letter-spacing: 5px;
+  /* background-image: repeating-linear-gradient(to right, pink , red 25%, blue 50%); */
+
+  /* background-image: repeating-radial-gradient(pink, red, blue 10%); */
+    /* background-image: repeating-conic-gradient(pink, red, blue 20%); */
+
+}
+
+
+.flex-container {
+  background-color: aqua;
+  display: flex;
+/* 
+  width: 2000px; */
+  height: 500px;
+  /* flex-direction: row;
+  flex-wrap: wrap-reverse; */
+
+  flex-flow: column wrap;
+
+  /* //main-start */
+  justify-content: space-evenly;
+
+  padding: 2px;
+  
+  width: 50%;
+  box-sizing: border-box
+}
+
+.flex-items {
+  background-color: red;
+  width: 100px;
+  height: 100px;
+  margin: 5px;
+}
+
+.dev1 {
+  margin-top: 5px;
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  padding: 15px;
+}
+
+
+.dev2 {
+  width: 80px;
+  height: 80px;
+  background-color: blue;
+}
