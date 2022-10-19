@@ -1,0 +1,98 @@
+.flex-container {
+  background-color: aqua;
+  display: flex;
+/* 
+  width: 2000px; */
+  height: 1000px;
+  /* flex-direction: row;
+  flex-wrap: wrap-reverse; */
+
+  flex-flow: row nowrap;
+
+  /* //main-start */
+  justify-content: flex-start;
+
+  /*Cross Axis*/
+  /* align-items: stretch; */
+  align-content: flex-start ;
+}
+
+.flex-items {
+  background-color: red;
+  width: 100px;
+  height: 100px;
+  margin: 5px;
+  /* flex-grow: 1;
+  flex-shrink: 1; */
+  text-align: center;
+  /* flex-basis: content; */
+
+  flex: 0 1 auto
+}
+
+
+.item-1 {
+  /* font-size: xx-large; */
+   height: 100px;
+  flex-shrink: 2;
+  flex-basis: content;
+  /* align-self: center; */
+  /* order: 6; */
+   /* flex-grow: 2; */
+}
+
+.item-3 {
+  /* height: 300px; */
+  flex-shrink: 3;
+  /* order: -4; */
+  font-size: 40px;
+}
+
+/* General Sibling Selector */
+h4 ~ p {
+  color: red;
+}
+
+/* Immediate Siblings Selector */
+h4 + p {
+  color: red;
+}
+
+#login:hover{
+  background-color: green;
+  color: white;
+}
+
+input:focus {
+  border-color: red;
+}
+
+input:checked{
+  accent-color: teal;
+}
+
+div:last-child{
+  color: blue;
+}
+
+section:last-child {
+  font-size: 50px;
+}
+
+span {
+  font-size: 20px;
+  /* background-color: blue; */
+}
+
+p::first-letter {
+  font-size: 20px;
+}
+
+p::first-line {
+  background-color: blue;
+}
+
+p::before {
+  font-family: "Material Icons";
+  content: "\e5cc";
+}
