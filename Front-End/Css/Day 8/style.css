@@ -92,7 +92,21 @@ p::first-line {
   background-color: blue;
 }
 
-p::before {
+h4::before {
   font-family: "Material Icons";
-  content: "\e5cc";
+  content: "\e876";
+  color: black;
+}
+
+p::after {
+  font-family: "Material Icons";
+  content: "\e5d2";
+}
+
+div:nth-child(odd) {
+  color: red;
+}
+
+div:nth-child(even) {
+  color: green;
 }
