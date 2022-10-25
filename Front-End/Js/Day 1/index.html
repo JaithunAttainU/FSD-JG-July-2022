@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link href="./style.css" rel="stylesheet" />
+  <script src="./script.js" defer></script>
+  <script src="./script2.js"></script>
+</head>
+
+<body>
+  <!-- <button onclick="clickMeBtnListener()" onmouseenter="clickMeBtnMouseEnterListener()"
+    onmouseleave="clickMeBtnMouseLeaveListener()">Click ME!</button> -->
+
+  <button id="clickMeBtn">Click Me!</button>
+  <!-- Internal JS - Do not Follow -->
+  <script>
+    console.log("Logging from Internal Js")
+    function add(a, b) {
+      return a + b
+    }
+
+    console.log(add(4, 5))
+  </script>
+</body>
+
+</html>
