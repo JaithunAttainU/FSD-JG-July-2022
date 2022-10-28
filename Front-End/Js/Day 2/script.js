@@ -5,8 +5,11 @@ const userNameIns = document.getElementById('username-ins')
 const sampleClassEles = document.getElementsByClassName('sample-class')
 console.log(sampleClassEles)
 
-const inputEles = document.getElementsByTagName('input')
+const inputEles = document.getElementsByTagName('div')
 console.log(inputEles)
+
+const queryEles = document.querySelectorAll('body div')
+console.log(queryEles)
 
 formEle.addEventListener('submit', (event) => {
   console.log("form is submitted")
