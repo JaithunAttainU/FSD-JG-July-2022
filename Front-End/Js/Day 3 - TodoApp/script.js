@@ -53,3 +53,6 @@ addBtnEle.addEventListener('click', () => {
     newTaskLiEle.classList.toggle('complete')
   }
 })
+
+console.log("hello" || "world")
+console.log("foo" && "bar")
