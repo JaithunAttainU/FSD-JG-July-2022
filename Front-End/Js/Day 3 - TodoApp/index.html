@@ -1,25 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDo App</title>
+    <script src="./scripts/mainScript.js" type="module" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link href="./css/main.css" rel="stylesheet" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ToDo App</title>
-  <script src="./script.js" defer></script>
-  <link href="./style.css" rel="stylesheet" />
-</head>
+  <body class="bg-slate-400" type="edit">
+    <h1 class="text-4xl text-center my-5">ToDo List</h1>
+    <div class="flex justify-center mx-auto sm:w-6/12">
+      <input
+        class="border rounded-l-full px-3 py-1 sm:flex-grow bg-slate-50 text-orange-600 sm:font-semibold placeholder:text-orange-300 placeholder:opacity-70 sm:placeholder:opacity-100 focus:outline-none"
+        type="text"
+        placeholder="Enter the task..."
+        id="task-input"
+      />
+      <button
+        class="border rounded-r-full border-orange-400 px-3 py-0 text-white bg-orange-400 hover:border-orange-500 hover:bg-orange-500"
+        type="submit"
+        id="add-btn"
+      >
+        <pre>Add Task</pre>
+      </button>
+      <div class="flex flex-col hidden" id="edit-cancel-section">
+        <button
+          class="rounded-tr-full border-orange-400 px-3 py-0 text-white bg-orange-400 hover:border-orange-500 hover:bg-orange-500"
+        >
+          <pre id="edit">Edit task</pre>
+        </button>
+        <button
+          class="rounded-br-full border-red-500 px-3 py-0 text-white bg-red-500 hover:bg-red-600"
+        >
+          <pre id="cancel">Cancel</pre>
+        </button>
+      </div>
+    </div>
+    <p id="error" class="hidden my-2 text-red-600 text-center">
+      Please enter a Task
+    </p>
+    <div class="flex justify-center gap-2 sm:gap-6 mt-2">
+      <div class="bg-slate-300 px-3 py-1 rounded-full">
+        <input id="pending" type="checkbox" />
+        <label for="pending">Pending</label>
+      </div>
+      <div class="bg-slate-300 px-3 py-1 rounded-full" id="completed-box">
+        <input id="completed" type="checkbox" />
+        <label for="completed">Completed</label>
+      </div>
+      <div class="bg-slate-300 px-3 py-1 rounded-full">
+        <input id="favourites" type="checkbox" />
+        <label for="favourites">Favourites</label>
+      </div>
+    </div>
 
-<body>
-  <h1>ToDo List</h1>
-  <input type="text" placeholder="Enter the task..." id="task-input" />
-  <button type="submit" id="add-btn">Add Task</button>
-
-  <div>
-    <ul id="to-do-list">
-      <!-- <li>Drink Water<button>X</button></li> -->
-    </ul>
-  </div>
-</body>
-
+    <ul id="list-elements"></ul>
+  </body>
 </html>
