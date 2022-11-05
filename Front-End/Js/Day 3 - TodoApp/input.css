@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  h1 {
+    @apply text-orange-500;
+  }
+  li {
+    @apply rounded
+    m-4 
+    px-1 
+    bg-orange-50 
+    sm:w-9/12
+    sm:flex 
+    sm:mx-auto;
+  }
+
+  li div:first-child {
+    @apply flex 
+    gap-2 
+    pb-2
+    sm:pb-0
+    sm:flex-grow;
+  }
+
+  li div:last-child {
+    @apply flex 
+    justify-evenly 
+    items-center 
+    gap-3 
+    border-t 
+    border-orange-300 
+    sm:border-orange-500 
+    mx-4 
+    my-2
+    py-0.5 
+    sm:border-l 
+    sm:border-t-0
+    sm:pl-2;
+  }
+
+  li div:first-child input,
+  li div:last-child input {
+    @apply mx-2 
+    my-auto
+    relative
+    w-4
+    h-4
+    appearance-none
+    outline-none;
+  }
+
+  li div:first-child input::before {
+    content: "\e836";
+    @apply absolute
+    text-orange-400;
+  }
+
+  li div:first-child input:checked::before {
+    content: "\e86c";
+    @apply text-green-500;
+  }
+
+  li div:last-child input {
+    @apply w-6 h-6;
+  }
+
+  li div:last-child input::after {
+    position: absolute;
+    content: "\e838";
+  }
+
+  li div:last-child input:checked::after {
+    @apply text-orange-500;
+    font-variation-settings: "FILL" 1;
+  }
+
+  li div:first-child p {
+    @apply flex-1 
+    my-auto 
+    mr-2;
+  }
+
+  li div:first-child input:checked + p {
+    @apply line-through;
+  }
+
+  .material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+  }
+
+  .material-symbols-outlined:hover {
+    cursor: pointer;
+  }
+}
