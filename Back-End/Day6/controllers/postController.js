@@ -1,4 +1,6 @@
 const editPost = (request, response) => {
+  //sign in check
+  //log
   const { postId } = request.params
 
   const index = posts.findIndex((post) => {
@@ -31,6 +33,8 @@ const editPost = (request, response) => {
 }
 
 const addPost = (request, response) => {
+  //sign in check
+  //log
   const postData = request.body
 
   if (postData) {
@@ -42,6 +46,8 @@ const addPost = (request, response) => {
 }
 
 const deletePost = (request, response) => {
+  //sign in check
+  //log
   const { postId } = request.params
 
   // posts = posts.filter(post => {
@@ -62,6 +68,9 @@ const deletePost = (request, response) => {
 }
 
 const getAllPost = (request, response) => {
+
+  //sign in check
+  //log
   const { userId, title } = request.query
 
   // const userId = queryParams.userId
