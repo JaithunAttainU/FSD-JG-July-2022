@@ -26,27 +26,39 @@ app.use(express.urlencoded()) //middleware to parse url encoded form data
 //temp arr to store products
 const products = []
 
-app.post('/products', upload.single('image'), (req, res) => {
-  //Product Info
-  const productData = req.body
-  products.push(productData)
-  console.log("Product POST call executed", productData)
+app.post('/products', /*upload.single('image')*/ upload.array('image'), async (req, res) => {
+  try {
+    //Product Info
+    const productData = req.body
+    products.push(productData)
+    console.log("Product POST call executed", productData)
 
-  //File Data Info
-  const fileData = req.file
+    //File Data Info
+    // const fileData = req.file
 
-  if (fileData) {
-    //file data in hexadecimal digits
-    console.log(fileData.buffer[0])[a, 10, 00, eb]
+    const filesData = req.files
+    if (filesData) {
+      console.log(filesData)
+      productData.imageUrl = []
+      for (let index = 0; index < filesData.length; index++) {
+        const singleFileData = filesData[index];
+        // file data in hexadecimal digits
+        console.log(singleFileData.buffer[0])
 
-    //convert buffer to base 64 string
-    const base64String = Base64.encode(fileData.buffer)
-    // console.log(base64String.substring(1, 20))
+        // convert buffer to base 64 string
+        const base64String = Base64.encode(singleFileData.buffer)
+        console.log(base64String.substring(1, 20))
 
-    //upload to cloudinary with base64 string
+        // upload to cloudinary with base64 string
+        const cloudRes = await cloudinary.uploader.upload(`data:${singleFileData.mimetype};base64,${base64String}`)
 
+        productData.imageUrl.push(cloudRes.secure_url)
+      }
+      res.send({ status: 'success', msg: 'Product Added Successfully' })
+    }
+  } catch (error) {
+    res.send({ status: 'error', msg: 'Error adding Product' })
   }
-  res.end()
 })
 
 
