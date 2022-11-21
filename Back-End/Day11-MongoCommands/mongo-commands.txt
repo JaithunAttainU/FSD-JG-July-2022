@@ -1,0 +1,42 @@
+//To list all databases
+show dbs;
+
+//To select/create a particular database
+use databaseName;
+
+//To view all collections in db
+show collections;
+
+//To insert one document in a collections
+db.collectionName.insertOne({name: 'Dhruv', address: 'meerut'})
+
+//To insert many documents in a collections
+db.collectionName.insertMany([{}, {}, {}])
+
+//To list all documents in a collection
+db.collectionName.find()
+
+//To list all documents matching a particular condition 
+db.collectionName.find({age: 24})
+
+//To list only one(first) document matching a particular condition 
+db.collectionName.findOne({age: 24})
+
+//To add multiple conditions
+db.collectionName.find({age: 24, name: 'Govind', color: 'pink'})
+
+//to add/update a key in one document
+db.collectionName.updateOne({name: 'Dhruv'}, {$set: {favColor: 'purple'}})
+
+//to add/update a one/multiple keys in all the document
+db.collectionName.updateMany({age:24}, {$set: {address: 'goa'}})
+
+//to delete a key ($unset)
+db.collectionName.updateOne({name:'Govind'}, {$set: {favColor: 'red'}, $unset: {age:1}})
+
+//To delete many doc 
+db.collectionName.deleteMany({age: 25})
+
+to delete one doc
+db.collectionName.deleteOne({age: 25})
+
