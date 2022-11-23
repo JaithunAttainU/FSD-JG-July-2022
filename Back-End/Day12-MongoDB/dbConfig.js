@@ -1,10 +1,9 @@
 const { MongoClient } = require('mongodb')
 
-const MONGO_URL = 'mongodb+srv://jaithun:12345@attainu.q1j9u.mongodb.net/?retryWrites=true&w=majority'
 const dbName = 'BookMyShow'
 
 async function initDB(collectionName) {
-  const client = new MongoClient(MONGO_URL)
+  const client = new MongoClient(process.env.MONGO_URL)
 
   // 1) Connect
   // 2) Db Name

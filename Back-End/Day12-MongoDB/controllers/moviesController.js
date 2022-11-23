@@ -51,6 +51,9 @@ const getMoviesByID = async (req, res) => {
 
 const postMovie = async (req, res) => {
   const movieData = req.body
+
+  //validation 10 files
+
   try {
     await moviesCollection.insertOne(movieData)
     res.status(201).send({ status: 'success' })
@@ -94,10 +97,3 @@ module.exports = {
   updateMovieById,
   deleteMovieByID
 }
-
-// function Person(name) {
-//   this.name = name
-// }
-
-
-// const personObj = new Person("Dhruv")
