@@ -9,7 +9,8 @@ const movieSchema = new Schema({
     unique: true
   },
   releaseDate: {
-    type: Date
+    type: Date,
+    default: Date.now()
   },
   language: String,
   cast: [String],

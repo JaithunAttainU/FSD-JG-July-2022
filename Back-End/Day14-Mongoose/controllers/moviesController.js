@@ -41,13 +41,13 @@ const postMovie = async (request, response) => {
 }
 
 const updateMovieById = async (request, response) => {
-
+  // /movie/{movieId}
   const { movieID } = request.params
   const updatedMovieData = request.body //{language, name, id}
   try {
     //DB Operation
     // await MovieModel.updateOne({ _id: new ObjectId(movieID) }, { $set: updatedMovieData })
-    const updateMovie = await MovieModel.findByIdAndUpdate(movieID, updatedMovieData)
+    const updateMovie = await MovieModel.findByIdAndUpdate(movieID, updatedMovieData, { new: true, runValidators: true }) //to perform schema validations input operation add runValidators as true
     response.send({ status: 'Updated Successfully', movie: updateMovie })
   } catch (err) {
     response.status(500).send({ status: 'error', msg: 'Cannot Update Movie' })
