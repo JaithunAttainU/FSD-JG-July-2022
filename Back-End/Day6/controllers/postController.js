@@ -92,6 +92,14 @@ const getAllPost = (request, response) => {
   response.send({ status: 'success', data: responseData })
 }
 
+const box = { x: 10, y: 20 };
+
+Object.freeze(box);
+
+const shape = box;
+shape.x = 100;
+
+console.log(shape);
 const getPostById = (request, response) => {
   // const { postId } = request.params //{ postId: '1' }
 
