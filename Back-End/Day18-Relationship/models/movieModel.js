@@ -19,7 +19,10 @@ const movieSchema = new Schema({
     max: 5,
     min: 0
   },
-  reviews: [String],
+  reviews: [{
+    type: mongoose.SchemaTypes.ObjectId,
+    ref: 'reviews'
+  }],
   is3D: Boolean
 })
 
