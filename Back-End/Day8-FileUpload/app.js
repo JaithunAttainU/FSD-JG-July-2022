@@ -25,7 +25,7 @@ const upload = multer({
 
 app.use(express.static('public'))
 app.use(express.urlencoded()) //middleware to parse url encoded form data
-
+express.json()
 //Libraries to accept files in express
 //multer
 //express-fileuploads
